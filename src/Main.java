@@ -27,9 +27,5 @@ public class Main {
 
         ort /= 6;
         System.out.println("Ortalamanız " + ort + ((ort < 60.0f)?" Kaldınız":" Geçtiniz"));
-
-
-
-
     }
 }
