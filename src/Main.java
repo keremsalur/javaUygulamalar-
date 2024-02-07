@@ -5,27 +5,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         // 6
-        float ort = 0.0f;
+        int urunFiyati;
         Scanner input = new Scanner(System.in);
-        System.out.println("Matematik Puanınız:");
-        ort += input.nextInt();
+        System.out.print("Ürün Fiyatını Giriniz: ");
+        urunFiyati = input.nextInt();
+        float kdvliFiyat = urunFiyati * ((urunFiyati <= 1000)?1.18f:1.08f);
+        System.out.println("Kdvli ürün fiyatı: " + kdvliFiyat);
 
-        System.out.println("Fizik Puanınız:");
-        ort += input.nextInt();
 
-        System.out.println("Kimya Puanınız:");
-        ort += input.nextInt();
 
-        System.out.println("Türkçe Puanınız:");
-        ort += input.nextInt();
-
-        System.out.println("Tarih Puanınız:");
-        ort += input.nextInt();
-
-        System.out.println("Müzik Puanınız:");
-        ort += input.nextInt();
-
-        ort /= 6;
-        System.out.println("Ortalamanız " + ort + ((ort < 60.0f)?" Kaldınız":" Geçtiniz"));
     }
 }
