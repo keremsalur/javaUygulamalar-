@@ -4,7 +4,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
-        float sayi1,sayi2,sonuc;
+        float sayi1,sayi2;
         int islem;
         Scanner input = new Scanner(System.in);
         System.out.print("1. sayi: ");
