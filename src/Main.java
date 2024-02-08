@@ -4,22 +4,32 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
-        float armut, elma, domates, muz, patlican, toplam;
+        float sayi1,sayi2,sonuc;
+        int islem;
         Scanner input = new Scanner(System.in);
-        System.out.print("Armut kaç kilo : ");
-        armut = input.nextFloat();
-        System.out.print("Elma kaç kilo : ");
-        elma = input.nextFloat();
-        System.out.print("Domates kaç kilo : ");
-        domates = input.nextFloat();
-        System.out.print("Muz kaç kilo : ");
-        muz = input.nextFloat();
-        System.out.print("Patlican kaç kilo : ");
-        patlican = input.nextFloat();
+        System.out.print("1. sayi: ");
+        sayi1 = input.nextFloat();
+        System.out.print("2. sayi: ");
+        sayi2 = input.nextFloat();
 
-        toplam = (armut * 2.14f) + (elma * 3.67f) + (domates * 1.1f) + (muz * 0.95f) + (patlican * 5.0f);
+        System.out.println("Toplaman için 1\nÇıkarma için 2\nBölme için 3\nÇarpma için 4");
+        islem = input.nextInt();
+        switch (islem){
+            case 1:
+                System.out.println(sayi1 + " + " + sayi2 + " = " + (sayi1+sayi2));
+                break;
+            case 2:
+                System.out.println(sayi1 + " - " + sayi2 + " = " + (sayi1-sayi2));
+                break;
+            case 3:
+                if(sayi2 == 0) System.out.println("2. Sayi 0 olamaz!");
+                else System.out.println(sayi1 + " / " + sayi2 + " = " + (sayi1/sayi2));
+                break;
+            case 4:
+                System.out.println(sayi1 + " * " + sayi2 + " = " + (sayi1*sayi2));
+                break;
+        }
 
-        System.out.println("Toplam: " + toplam);
 
     }
 }
