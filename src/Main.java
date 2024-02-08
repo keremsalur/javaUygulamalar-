@@ -4,13 +4,16 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
-        float fiyat,km;
+        int r,a;
+        float alan;
         Scanner input = new Scanner(System.in);
-        System.out.print("Yolculuk kaç km olacak: ");
-        km = input.nextFloat();
-        fiyat = 10 + (km * 2.2f);
-        fiyat = (fiyat < 20) ? 20 : fiyat;
-        System.out.println("Taksi Ücreti: " + fiyat);
+        System.out.print("R: ");
+        r = input.nextInt();
+        System.out.print("A açısı: ");
+        a = input.nextInt();
+        alan = (3.14f * (r*r) / a ) / 360;
+
+        System.out.println("Daire Alanı: " + alan);
 
 
 
