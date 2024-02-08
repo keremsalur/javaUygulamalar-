@@ -4,16 +4,16 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args){
-        int r,a;
-        float alan;
+        int kilo;
+        float vki,boy;
         Scanner input = new Scanner(System.in);
-        System.out.print("R: ");
-        r = input.nextInt();
-        System.out.print("A açısı: ");
-        a = input.nextInt();
-        alan = (3.14f * (r*r) / a ) / 360;
+        System.out.print("Boy (m) : ");
+        boy = input.nextFloat();
+        System.out.print("Kilo: ");
+        kilo = input.nextInt();
+        vki = (float) kilo * boy / boy;
 
-        System.out.println("Daire Alanı: " + alan);
+        System.out.println("Vücut kitle indexi: " + vki);
 
 
 
